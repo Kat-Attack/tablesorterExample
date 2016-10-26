@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>tablesorterSample</title>
+    </head>
+    <body>
+        <!-- TABLESORTER: must use table, thead, and tbody tags!! -->
+        <table id="eventsList" class="tablesorter">
+                    <thead>
+                        <tr>
+                            <td><strong>From</strong></td>
+                            <td><strong>To</strong></td>
+                            <td><strong>Block Number</strong></td>
+                            <td><strong>Transaction Hash</strong></td>
+                            <td><strong>Value</strong></td>
+                            <td><strong>Cashier Receipt</strong></td>
+                            <td><strong>Price</strong></td>
+                        </tr>    
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="test"> me </div></td>
+                            <td><div class="test"> you </div></td>
+                            <td><div class="test"> 454 </div></td>
+                            <td><div class="test"> 0x23432 </div></td>
+                            <td><div class="test"> test </div></td>
+                            <td><div class="test"> success </div></td>
+                            <td><div class="test"> 45.5 </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="test"> him </div></td>
+                            <td><div class="test"> her </div></td>
+                            <td><div class="test"> 676 </div></td>
+                            <td><div class="test"> 0x5632 </div></td>
+                            <td><div class="test"> anothertest </div></td>
+                            <td><div class="test"> fail </div></td>
+                            <td><div class="test"> 3.45 </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="test"> bob </div></td>
+                            <td><div class="test"> jane </div></td>
+                            <td><div class="test"> 45 </div></td>
+                            <td><div class="test"> 0x52532 </div></td>
+                            <td><div class="test"> test1 </div></td>
+                            <td><div class="test"> fail </div></td>
+                            <td><div class="test"> 345 </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="test"> mary </div></td>
+                            <td><div class="test"> tim </div></td>
+                            <td><div class="test"> 533 </div></td>
+                            <td><div class="test"> 0xfds776 </div></td>
+                            <td><div class="test"> test2 </div></td>
+                            <td><div class="test"> success </div></td>
+                            <td><div class="test"> 0.55 </div></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+    </body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="js/jquery.tablesorter.widgets.js"></script> 
+</html>
+<script>
+    $( function() {
+        $( 'table' ).tablesorter({
+            widthFixed : true,
+            widgets: ["zebra", "filter"],
+            widgetOptions : {
+                // if true, a filter will be added to the top of each table column
+                filter_columnFilters : true,
+
+                // if false, searches are case sensitive
+                filter_ignoreCase : true,
+
+                // if true, search column content while the user types (with a delay)
+                filter_liveSearch : true,
+
+                // jQuery selector string of an element used to reset the filters
+                filter_reset : 'button.reset',
+
+                // Delay in milliseconds before the filter widget starts searching - prevents searching for
+                // every character while typing and should make searching large tables faster.
+                filter_searchDelay : 300,
+
+                // if true, server-side filtering should be performed since client-side filtering will be disabled, but
+                // the ui and events will still be used.
+                filter_serversideFiltering: false,
+
+                // it true, finds text that only starts with the input
+                filter_startsWith : false,
+
+                // allows the external search field to work for all data
+                filter_external: 'input.search',
+
+                // Filter using parsed content for ALL columns
+                // be careful on using this on date columns as the date is parsed and stored as time in seconds
+                filter_useParsedData : false
+            }
+        });
+    });
+</script>

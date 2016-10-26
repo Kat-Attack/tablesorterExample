@@ -1,0 +1,22 @@
+{
+  "name": "tablesorterex",
+  "version": "1.0.0",
+  "description": "sample usage of tablesorter",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kat-Attack/tablesorterExample.git"
+  },
+  "author": "Kathy Xu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kat-Attack/tablesorterExample/issues"
+  },
+  "homepage": "https://github.com/Kat-Attack/tablesorterExample#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "tablesorter": "^2.27.8"
+  }
+}
